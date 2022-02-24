@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--默认首页获取：org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.EnableWebMvcConfiguration.getWelcomePage-->
+<h1>首页template</h1>
+在thymeleaf中:
+    文本用 #{home.welcome}取值；
+    链接需要使用 @{/css/1.css};
+    变量用${...};
+    选择表达式用*{...}
+<h2 th:text="${msg}"></h2>
+<div th:text = "${msg}"></div>
+<h3 th:each = "em:${list}" th:text="${em}"></h3>
+<body>
+
+</body>
+</html>
