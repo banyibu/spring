@@ -13,7 +13,7 @@ import java.util.Locale;
 
 //扩展mvc配置
 @Configuration
-//@EnableWebMvc 该注解导入了DelegatingWebMvcConfiguration 类，该类获取所有webmvcConfig；
+//@EnableWebMvc 该注解导入了DelegatingWebMvcConfiguration 类，该类的作用是获取所有webmvcConfig；
 public class MyMvcConfig implements WebMvcConfigurer {
     //实现了视图解析器ViewResolver的类，就可以把他看作时视图解析器；
 

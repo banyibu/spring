@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +11,16 @@
 	<title>Neon | Dashboard</title>
 	
 
-	<link rel="stylesheet" href="static/css/jquery-ui-1.10.3.custom.min.css">
-	<link rel="stylesheet" href="static/css/entypo.css">
-	<link rel="stylesheet" href="static/css/css.css">
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/neon-core.css">
-	<link rel="stylesheet" href="static/css/neon-theme.css">
-	<link rel="stylesheet" href="static/css/neon-forms.css">
-	<link rel="stylesheet" href="static/css/custom.css">
+	<link rel="stylesheet" th:href="@{/css/jquery-ui-1.10.3.custom.min.css}">
+	<link rel="stylesheet" th:href="@{/css/entypo.css}">
+	<link rel="stylesheet" th:href="@{/css/css.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" th:href="@{/css/neon-core.css}">
+	<link rel="stylesheet" th:href="@{/css/neon-theme.css}">
+	<link rel="stylesheet" th:href="@{/css/neon-forms.css}">
+	<link rel="stylesheet" th:href="@{/css/custom.css}">
 
-	<script src="static/js/jquery-1.11.0.min.js"></script>
+	<script th:src="@{/js/jquery-1.11.0.min.js}"></script>
 
 	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -44,7 +44,7 @@
 			<!-- logo -->
 			<div class="logo">
 				<a href="">
-					<img src="static/picture/logo@2x.png" width="120" alt="">
+					<img th:src="@{/picture/logo@2x.png}"width="120" alt="">
 				</a>
 			</div>
 			
@@ -501,7 +501,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="extra-login.html">
+						<a th:href="@{extra-login.html}">
 							<span>Login</span>
 						</a>
 					</li>
@@ -721,7 +721,7 @@
 			<li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
 				
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<img src="static/picture/thumb-1@2x.png" alt="" class="img-circle" width="44">
+					<img th:src="@{/picture/thumb-1@2x.png}"alt="" class="img-circle" width="44">
 					Art Ramadani
 				</a>
 				
@@ -889,7 +889,7 @@
 		<li class="active">
 			<a href="#">
 				<span class="image pull-right">
-					<img src="static/picture/thumb-1.png" alt="" class="img-circle">
+					<img th:src="@{/picture/thumb-1.png}"alt="" class="img-circle">
 				</span>
 				
 				<span class="line">
@@ -906,7 +906,7 @@
 		<li class="active">
 			<a href="#">
 				<span class="image pull-right">
-					<img src="static/picture/thumb-2.png" alt="" class="img-circle">
+					<img th:src="@{/picture/thumb-2.png}"alt="" class="img-circle">
 				</span>
 				
 				<span class="line">
@@ -923,7 +923,7 @@
 		<li>
 			<a href="#">
 				<span class="image pull-right">
-					<img src="static/picture/thumb-3.png" alt="" class="img-circle">
+					<img th:src="@{/picture/thumb-3.png}"alt="" class="img-circle">
 				</span>
 				
 				<span class="line">
@@ -940,7 +940,7 @@
 		<li>
 			<a href="#">
 				<span class="image pull-right">
-					<img src="static/picture/thumb-4.png" alt="" class="img-circle">
+					<img th:src="@{/picture/thumb-4.png}"alt="" class="img-circle">
 				</span>
 				
 				<span class="line">
@@ -1084,37 +1084,37 @@
 				
 				Language: &nbsp;
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-close-others="true">
-					<img src="static/picture/flag-uk.png">
+					<img th:src="@{/picture/flag-uk.png}">
 				</a>
 				
 				<ul class="dropdown-menu pull-right">
 					<li>
 						<a href="#">
-							<img src="static/picture/flag-de.png">
+							<img th:src="@{/picture/flag-de.png}">
 							<span>Deutsch</span>
 						</a>
 					</li>
 					<li class="active">
 						<a href="#">
-							<img src="static/picture/flag-uk.png">
+							<img th:src="@{/picture/flag-uk.png}">
 							<span>English</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<img src="static/picture/flag-fr.png">
+							<img th:src="@{/picture/flag-fr.png}">
 							<span>François</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<img src="static/picture/flag-al.png">
+							<img th:src="@{/picture/flag-al.png}">
 							<span>Shqip</span>
 						</a>
 					</li>
 					<li>
 						<a href="#">
-							<img src="static/picture/flag-es.png">
+							<img th:src="@{/picture/flag-es.png}">
 							<span>Español</span>
 						</a>
 					</li>
@@ -1137,7 +1137,7 @@
 			<li class="sep"></li>
 			
 			<li>
-				<a href="extra-login.html">
+				<a href="login/extra-login.html">
 					Log Out <i class="entypo-logout right"></i>
 				</a>
 			</li>
@@ -1688,21 +1688,21 @@ function getRandomInt(min, max)
 				</div>
 				
 				<div class="tile-entry">
-					<img src="static/picture/sample-al.png" alt="" class="pull-right op">
+					<img th:src="@{/picture/sample-al.png}"alt="" class="pull-right op">
 					
 					<h4>Albania</h4>
 					<span>25%</span>
 				</div>
 				
 				<div class="tile-entry">
-					<img src="static/picture/sample-it.png" alt="" class="pull-right op">
+					<img th:src="@{/picture/sample-it.png}" alt="" class="pull-right op">
 					
 					<h4>Italy</h4>
 					<span>18%</span>
 				</div>
 				
 				<div class="tile-entry">
-					<img src="static/picture/sample-au.png" alt="" class="pull-right op">
+					<img th:src="@{/picture/sample-au.png}" alt="" class="pull-right op">
 					
 					<h4>Austria</h4>
 					<span>15%</span>
@@ -1909,27 +1909,27 @@ function getRandomInt(min, max)
 	</div>
 </div>
 
-	<link rel="stylesheet" href="static/css/jquery-jvectormap-1.2.2.css">
-	<link rel="stylesheet" href="static/css/rickshaw.min.css">
+	<link rel="stylesheet" th:href="@{/css/jquery-jvectormap-1.2.2.css}">
+	<link rel="stylesheet" th:href="@{/css/rickshaw.min.css}">
 
 	<!-- Bottom Scripts -->
-	<script src="static/js/main-gsap.js"></script>
-	<script src="static/js/jquery-ui-1.10.3.minimal.min.js"></script>
-	<script src="static/js/bootstrap.js"></script>
-	<script src="static/js/joinable.js"></script>
-	<script src="static/js/resizeable.js"></script>
-	<script src="static/js/neon-api.js"></script>
-	<script src="static/js/jquery-jvectormap-1.2.2.min.js"></script>
-	<script src="static/js/jquery-jvectormap-europe-merc-en.js"></script>
-	<script src="static/js/jquery.sparkline.min.js"></script>
-	<script src="static/js/d3.v3.js"></script>
-	<script src="static/js/rickshaw.min.js"></script>
-	<script src="static/js/raphael-min.js"></script>
-	<script src="static/js/morris.min.js"></script>
-	<script src="static/js/toastr.js"></script>
-	<script src="static/js/neon-chat.js"></script>
-	<script src="static/js/neon-custom.js"></script>
-	<script src="static/js/neon-demo.js"></script>
+	<script th:src="@{/js/main-gsap.js}"></script>
+	<script th:src="@{/js/jquery-ui-1.10.3.minimal.min.js}"></script>
+	<script th:src="@{/js/bootstrap.js}"></script>
+	<script th:src="@{/js/joinable.js}"></script>
+	<script th:src="@{/js/resizeable.js}"></script>
+	<script th:src="@{/js/neon-api.js}"></script>
+	<script th:src="@{/js/jquery-jvectormap-1.2.2.min.js}"></script>
+	<script th:src="@{/js/jquery-jvectormap-europe-merc-en.js}"></script>
+	<script th:src="@{/js/jquery.sparkline.min.js}"></script>
+	<script th:src="@{/js/d3.v3.js}"></script>
+	<script th:src="@{/js/rickshaw.min.js}"></script>
+	<script th:src="@{/js/raphael-min.js}"></script>
+	<script th:src="@{/js/morris.min.js}"></script>
+	<script th:src="@{/js/toastr.js}"></script>
+	<script th:src="@{/js/neon-chat.js}"></script>
+	<script th:src="@{/js/neon-custom.js}"></script>
+	<script th:src="@{/js/neon-demo.js}"></script>
 
 </body>
 </html>

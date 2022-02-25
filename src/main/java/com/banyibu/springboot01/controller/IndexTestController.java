@@ -23,9 +23,9 @@ public class IndexTestController {
         return "index-study";
     }
 
-    @GetMapping("/pjindex")
+    @GetMapping("/main")
     public String index(Model model){
         model.addAttribute("","");
-        return "moban/index";
+        return "index";
     }
 }
