@@ -720,9 +720,10 @@
 						<!-- Profile Info -->
 			<li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
 				
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" > <!-- th:text = "${session.username}" -->
 					<img th:src="@{/picture/thumb-1@2x.png}"alt="" class="img-circle" width="44">
-					Art Ramadani
+<!--					Art Ramadani-->
+					[[${session.username}]]
 				</a>
 				
 				<ul class="dropdown-menu">

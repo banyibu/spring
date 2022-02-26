@@ -61,7 +61,7 @@ var neonLogin = neonLogin || {};
 											
 					// Send data to the server
 					$.ajax({
-						url: baseurl + 'data/sample-login-form.php',
+						url: baseurl + 'login/submit',
 						method: 'POST',
 						dataType: 'json',
 						data: {
@@ -96,7 +96,7 @@ var neonLogin = neonLogin || {};
 									// Redirect to login page
 									setTimeout(function()
 									{
-										var redirect_url = baseurl;
+										var redirect_url = baseurl + 'main';
 										
 										if(response.redirect_url && response.redirect_url.length)
 										{

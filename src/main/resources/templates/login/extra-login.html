@@ -36,7 +36,7 @@
 
 
 <!-- This is needed when you send requests via Ajax --><script type="text/javascript">
-var baseurl = '';
+var baseurl = '/';
 </script>
 
 <div class="login-container">
@@ -49,7 +49,7 @@ var baseurl = '';
 				<img th:src="@{/picture/logo@2x.png}" width="120" alt="">
 			</a>
 			
-			<p class="description">Dear user, log in to access the admin area!</p>
+			<p class="description" th:text="#{login.tip}">Dear user, log in to access the admin area!</p>
 			
 			<!-- progress bar indicator -->
 			<div class="login-progressbar-indicator">
@@ -82,7 +82,7 @@ var baseurl = '';
 							<i class="entypo-user"></i>
 						</div>
 						
-						<input type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off">
+						<input type="text" class="form-control" name="username" id="username" th:placeholder="#{login.username}" autocomplete="off">
 					</div>
 					
 				</div>
@@ -94,7 +94,7 @@ var baseurl = '';
 							<i class="entypo-key"></i>
 						</div>
 						
-						<input type="password" class="form-control" name="password" id="password" placeholder="Password" autocomplete="off">
+						<input type="password" class="form-control" name="password" id="password" th:placeholder="#{login.password}" autocomplete="off">
 					</div>
 				
 				</div>
@@ -102,12 +102,12 @@ var baseurl = '';
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary btn-block btn-login">
 						<i class="entypo-login"></i>
-						Login In
+						[[#{login.btnvalue}]]
 					</button>
 				</div>
 				
 				<!-- Implemented in v1.1.4 -->				<div class="form-group">
-					<em>- or -</em>
+					<em th:text="#{login.word.or}">- or -</em>
 				</div>
 				
 				<div class="form-group">
@@ -140,15 +140,19 @@ var baseurl = '';
 					
 				</div> -->				
 			</form>
+			<div>
+				<a class="btn btn-black" th:href="@{/login(l=zh_CN)}">中文</a>
+				<a class="btn btn-black" th:href="@{/login(l=en_US)}">英文</a>
+			</div>
 			
 			
 			<div class="login-bottom-links">
 				
-				<a href="../extra-forgot-password.html" class="link">Forgot your password?</a>
+				<a href="../extra-forgot-password.html" class="link" th:text="#{login.forgot_password}">Forgot your password?</a>
 				
 				<br>
 				
-				<a href="#">ToS</a>  - <a href="#">Privacy Policy</a>
+				<a href="#">ToS</a>  - <a href="#" th:text = "#{login.privacy_policy}">Privacy Policy</a>
 				
 			</div>
 			
