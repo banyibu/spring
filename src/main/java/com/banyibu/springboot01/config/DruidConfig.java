@@ -15,6 +15,9 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Druid后台监控配置类
+ */
 @Configuration
 public class DruidConfig {
 
@@ -40,6 +43,7 @@ public class DruidConfig {
         return bean;
     }
 
+    //指定要过滤的资源
     @Bean
     public FilterRegistrationBean webStatFilter(){
         FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>();
@@ -48,7 +52,6 @@ public class DruidConfig {
         Map<String, String> initParMap = new HashMap<>();
         //这些访问不统计
         initParMap.put("exclusions","*.js,*.css,druid/*");
-        initParMap.put("loginPassword","123456");
         return bean;
     }
 }
